@@ -3,7 +3,13 @@
   <entry>
     <title><![CDATA[POJ2586]]></title>
     <url>%2F2019%2F01%2F14%2FPOJ2586%2F</url>
-    <content type="text"><![CDATA[题目链接:http://poj.org/problem?id=2586 大致题意：已知一个公司在某一年中，每个月要么固定盈利s、要么固定亏损d。 但是具体哪个月盈利、哪个月亏损却不得而知。不过可以肯定的是，这一年中，任意的连续5个月盈亏和必定是亏损。 问这年是否存在盈利的可能，若可能盈利，输出最大的盈利额，若不存在盈利，输出”Deficit”。 解题思路： ①假设所有的月均为盈利，判断第一个连续五月是亏损，如果不亏损，将最后一个月设为亏损，再次判断如果仍亏损的话让倒数第二个月设为亏损。。直到满足情况为止。 ②依次判断8个连续的五月，最后检查总情况。 AC代码：‘’’ #include using namespace std; int add(int m[], int n){ int i = 0; int result = 0; for(int i = n; i &lt; n + 5; i++) { result = result + m[i]; } return result;}int main(){ int d, s; int month[12]; while(cin &gt;&gt; s &gt;&gt; d) { for(int i = 1; i &lt;= 12; i++) { month[i] = s; } for(int i = 1; i &lt;= 8; i++) { for(int j = 1; j &lt;= 5; j++) { int flag = add(month, i); if(flag &gt; 0) { month[i + 5 - j] = -d; } else break; } } int surplus = 0; for(int i = 1; i &lt;= 12; i++) { surplus += month[i]; } if(surplus &gt; 0) { cout &lt;&lt; surplus &lt;&lt; endl; } else cout &lt;&lt; “Deficit” &lt;&lt; endl; } return 0;}‘’’]]></content>
+    <content type="text"><![CDATA[题目链接:http://poj.org/problem?id=2586 大致题意：已知一个公司在某一年中，每个月要么固定盈利s、要么固定亏损d。 但是具体哪个月盈利、哪个月亏损却不得而知。不过可以肯定的是，这一年中，任意的连续5个月盈亏和必定是亏损。 问这年是否存在盈利的可能，若可能盈利，输出最大的盈利额，若不存在盈利，输出”Deficit”。 解题思路： ①假设所有的月均为盈利，判断第一个连续五月是亏损，如果不亏损，将最后一个月设为亏损，再次判断如果仍亏损的话让倒数第二个月设为亏损。。直到满足情况为止。 ②依次判断8个连续的五月，最后检查总情况。 AC代码：12345678910111213141516171819202122232425262728293031323334353637383940#include &lt;iostream&gt;using namespace std;int add(int m[], int n)&#123; int i = 0; int result = 0; for(int i = n; i &lt; n + 5; i++) &#123; result = result + m[i]; &#125; return result;&#125;int main()&#123; int d, s; int month[12]; while(cin &gt;&gt; s &gt;&gt; d) &#123; for(int i = 1; i &lt;= 12; i++) &#123; month[i] = s; &#125; for(int i = 1; i &lt;= 8; i++) &#123; for(int j = 1; j &lt;= 5; j++) &#123; int flag = add(month, i); if(flag &gt; 0) &#123; month[i + 5 - j] = -d; &#125; else break; &#125; &#125; int surplus = 0; for(int i = 1; i &lt;= 12; i++) &#123; surplus += month[i]; &#125; if(surplus &gt; 0) &#123; cout &lt;&lt; surplus &lt;&lt; endl; &#125; else cout &lt;&lt; "Deficit" &lt;&lt; endl; &#125; return 0;&#125;]]></content>
+      <categories>
+        <category>POJ</category>
+      </categories>
+      <tags>
+        <tag>POJ</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
