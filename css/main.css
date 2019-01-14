@@ -608,7 +608,6 @@ pre code {
   padding-right: 10px;
   color: #869194;
   text-align: right;
-  background-color: #eff2f3;
 }
 .highlight .code pre {
   width: 100%;
@@ -2236,7 +2235,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #22d0df;
+  background: #46ff66;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3547,16 +3546,36 @@ code {
   background: #fbf7f8;
   margin: 2px;
 }
+code {
+  background: rgba(241,241,241,0.3);
+  margin: 2px;
+}
+.highlight {
+  background: rgba(241,241,241,0.3);
+}
 .highlight,
 pre {
   margin: 5px 0;
   padding: 5px;
   border-radius: 3px;
+  background: rgba(241,241,241,0.3);
+}
+.highlight,
+td {
+  background: rgba(241,241,241,0.1);
+}
+.highlight,
+gutter pre {
+  background: rgba(241,241,241,0.1);
 }
 .highlight,
 code,
 pre {
   border: 1px solid #d6d6d6;
+  background: rgba(241,241,241,0.3);
+}
+table>tbody>tr:nth-of-type(odd) {
+  background: rgba(241,241,241,0.1);
 }
 .post {
   margin-top: 60px;
