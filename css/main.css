@@ -485,7 +485,7 @@ body {
 .header-inner {
   margin: 0 auto;
   padding: 100px 0 70px;
-  width: calc(100% - 20px);
+  width: calc(100% - 15px);
 }
 @media (min-width: 1200px) {
   .container .header-inner {
@@ -499,7 +499,7 @@ body {
 }
 .main-inner {
   margin: 0 auto;
-  width: calc(100% - 20px);
+  width: calc(100% - 15px);
 }
 @media (min-width: 1200px) {
   .container .main-inner {
@@ -517,7 +517,7 @@ body {
 .footer-inner {
   box-sizing: border-box;
   margin: 0px auto;
-  width: calc(100% - 20px);
+  width: calc(100% - 15px);
 }
 @media (min-width: 1200px) {
   .container .footer-inner {
@@ -1018,7 +1018,7 @@ pre .javascript .function {
   margin-top: 4px;
 }
 .pagination {
-  margin: 120px 0 40px;
+  margin: 130px 0 30px;
   text-align: center;
   border-top: 1px solid #eee;
 }
@@ -1659,7 +1659,7 @@ pre .javascript .function {
 }
 .posts-expand .post-eof {
   display: block;
-  margin: 80px auto 60px;
+  margin: 30px auto 30px;
   width: 8%;
   height: 1px;
   background: #ccc;
@@ -2189,7 +2189,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #aaf678;
+  background: #ffff2f;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2874,7 +2874,7 @@ ul.breadcrumb li+li:last-child {
 .header {
   position: relative;
   margin: 0 auto;
-  width: calc(100% - 20px);
+  width: calc(100% - 15px);
 }
 @media (min-width: 1200px) {
   .header {
@@ -2946,7 +2946,7 @@ ul.breadcrumb li+li:last-child {
 .content-wrap {
   float: right;
   box-sizing: border-box;
-  padding: 40px;
+  padding: 30px;
   width: calc(100% - 252px);
   background: #fff;
   min-height: 700px;
@@ -3336,6 +3336,11 @@ ul.breadcrumb li+li:last-child {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+@media (max-width: 767px) {
+  .post-body {
+    text-align: justify;
+  }
+}
 .content-wrap {
   padding: initial;
   background: initial;
@@ -3343,7 +3348,7 @@ ul.breadcrumb li+li:last-child {
   border-radius: initial;
 }
 .post-block {
-  padding: 40px;
+  padding: 30px;
   background: #fff;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
   border-radius: initial;
@@ -3354,7 +3359,7 @@ ul.breadcrumb li+li:last-child {
   border-radius: initial;
 }
 .comments {
-  padding: 40px;
+  padding: 30px;
   margin: auto;
   margin-top: 12px;
   background: #fff;
