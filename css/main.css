@@ -1144,10 +1144,6 @@ pre .javascript .function {
 .header-inner {
   position: relative;
 }
-.headband {
-  height: 3px;
-  background: #222;
-}
 .site-meta {
   margin: 0;
   text-align: center;
@@ -2193,7 +2189,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3962ff;
+  background: #8bc7ff;
 }
 .links-of-blogroll {
   font-size: 13px;
