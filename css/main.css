@@ -189,7 +189,7 @@ th {
 }
 body {
   position: relative;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Noto Serif SC', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 12px;
   line-height: 2;
   color: #555;
@@ -220,7 +220,7 @@ h6 {
   padding: 0;
   font-weight: bold;
   line-height: 1.5;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Noto Serif SC', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 h1,
 h2,
@@ -545,7 +545,7 @@ pre,
 }
 pre,
 code {
-  font-family: consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
+  font-family: consolas, Menlo, 'Noto Serif SC', "PingFang SC", "Microsoft YaHei", sans-serif, monospace;
 }
 code {
   overflow-wrap: break-word;
@@ -793,8 +793,9 @@ pre .javascript .function {
   position: relative;
   padding: 15px;
   margin-bottom: 20px;
-  border: 1px solid #eee;
-  border-left-width: 5px;
+  border: initial;
+  border-left: 3px solid #eee;
+  background-color: #f9f9f9;
   border-radius: 3px;
 }
 .post-body .note h2,
@@ -802,7 +803,7 @@ pre .javascript .function {
 .post-body .note h4,
 .post-body .note h5,
 .post-body .note h6 {
-  margin-top: 0;
+  margin-top: 3px;
   margin-bottom: 0;
   border-bottom: initial;
   padding-top: 0 !important;
@@ -823,7 +824,18 @@ pre .javascript .function {
 .post-body .note blockquote:last-child {
   margin-bottom: 0;
 }
+.post-body .note:not(.no-icon) {
+  padding-left: 45px;
+}
+.post-body .note:not(.no-icon):before {
+  position: absolute;
+  font-family: 'FontAwesome';
+  font-size: larger;
+  top: 13px;
+  left: 15px;
+}
 .post-body .note.default {
+  background-color: #f7f7f7;
   border-left-color: #777;
 }
 .post-body .note.default h2,
@@ -833,7 +845,12 @@ pre .javascript .function {
 .post-body .note.default h6 {
   color: #777;
 }
+.post-body .note.default:not(.no-icon):before {
+  content: "\f0a9";
+  color: #777;
+}
 .post-body .note.primary {
+  background-color: #f5f0fa;
   border-left-color: #6f42c1;
 }
 .post-body .note.primary h2,
@@ -843,7 +860,12 @@ pre .javascript .function {
 .post-body .note.primary h6 {
   color: #6f42c1;
 }
+.post-body .note.primary:not(.no-icon):before {
+  content: "\f055";
+  color: #6f42c1;
+}
 .post-body .note.info {
+  background-color: #eef7fa;
   border-left-color: #428bca;
 }
 .post-body .note.info h2,
@@ -853,7 +875,12 @@ pre .javascript .function {
 .post-body .note.info h6 {
   color: #428bca;
 }
+.post-body .note.info:not(.no-icon):before {
+  content: "\f05a";
+  color: #428bca;
+}
 .post-body .note.success {
+  background-color: #eff8f0;
   border-left-color: #5cb85c;
 }
 .post-body .note.success h2,
@@ -863,7 +890,12 @@ pre .javascript .function {
 .post-body .note.success h6 {
   color: #5cb85c;
 }
+.post-body .note.success:not(.no-icon):before {
+  content: "\f058";
+  color: #5cb85c;
+}
 .post-body .note.warning {
+  background-color: #fdf8ea;
   border-left-color: #f0ad4e;
 }
 .post-body .note.warning h2,
@@ -873,7 +905,12 @@ pre .javascript .function {
 .post-body .note.warning h6 {
   color: #f0ad4e;
 }
+.post-body .note.warning:not(.no-icon):before {
+  content: "\f06a";
+  color: #f0ad4e;
+}
 .post-body .note.danger {
+  background-color: #fcf1f2;
   border-left-color: #d9534f;
 }
 .post-body .note.danger h2,
@@ -881,6 +918,10 @@ pre .javascript .function {
 .post-body .note.danger h4,
 .post-body .note.danger h5,
 .post-body .note.danger h6 {
+  color: #d9534f;
+}
+.post-body .note.danger:not(.no-icon):before {
+  content: "\f056";
   color: #d9534f;
 }
 .post-body .label {
@@ -930,6 +971,10 @@ pre .javascript .function {
   border-top: 3px solid transparent;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
+  border-radius: 3px 3px 0 0;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
 }
 @media (max-width: 413px) {
   .post-body .tabs ul.nav-tabs li.tab {
@@ -938,6 +983,11 @@ pre .javascript .function {
     border-left: 3px solid transparent;
     border-right: 1px solid transparent;
     border-bottom: 1px solid transparent;
+  }
+}
+@media (max-width: 413px) {
+  .post-body .tabs ul.nav-tabs li.tab {
+    border-radius: 3px;
   }
 }
 .post-body .tabs ul.nav-tabs li.tab a {
@@ -977,12 +1027,21 @@ pre .javascript .function {
 .post-body .tabs .tab-content .tab-pane {
   border: 1px solid #ddd;
   padding: 20px 20px 0 20px;
+  border-radius: 3px;
 }
 .post-body .tabs .tab-content .tab-pane:not(.active) {
   display: none !important;
 }
 .post-body .tabs .tab-content .tab-pane.active {
   display: block !important;
+}
+.post-body .tabs .tab-content .tab-pane.active:nth-of-type(1) {
+  border-radius: 0 3px 3px 3px;
+}
+@media (max-width: 413px) {
+  .post-body .tabs .tab-content .tab-pane.active:nth-of-type(1) {
+    border-radius: 3px;
+  }
 }
 .btn {
   display: inline-block;
@@ -1180,7 +1239,7 @@ pre .javascript .function {
   line-height: 36px;
   font-size: 20px;
   font-weight: normal;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Noto Serif SC', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 .site-subtitle {
   margin-top: 10px;
@@ -1273,7 +1332,7 @@ pre .javascript .function {
 .post-body {
   overflow-wrap: break-word;
   word-wrap: break-word;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Noto Serif SC', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 .post-body .exturl .fa {
   font-size: 14px;
@@ -1556,7 +1615,7 @@ pre .javascript .function {
 .posts-expand .post-meta {
   margin: 3px 0 60px 0;
   color: #999;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Noto Serif SC', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 12px;
   text-align: center;
 }
@@ -2193,7 +2252,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #c8810e;
+  background: #3ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2349,10 +2408,13 @@ img:hover {
 .footer-inner {
   text-align: center;
 }
+#animate {
+  animation: iconAnimate 1.33s ease-in-out infinite;
+}
 .with-love {
   display: inline-block;
   margin: 0 5px;
-  color: #808080;
+  color: ff0000;
 }
 .powered-by,
 .theme-info {
@@ -3591,4 +3653,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+}
+body {
+  color: #000;
 }
