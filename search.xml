@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Coding+Hexo搭建自己的博客网站系列1-本地环境部署]]></title>
-    <url>%2F2019%2F01%2F15%2FCoding-Hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%B3%BB%E5%88%971-%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%2F</url>
-    <content type="text"><![CDATA[前言 &lt; 最近我终于实现了自己很久之前关于搭建自己专属的博客网站的目标，现在把搭建期间的过程和走过的坑记录下来，如果你对搭建自己的网站有兴趣，不妨可以参考一下我的文章。首先我说下自己的版本]]></content>
+    <title><![CDATA[Hexo+Coding搭建自己的博客网站系列1-本地环境部署]]></title>
+    <url>%2F2019%2F01%2F17%2FCoding-Hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%B3%BB%E5%88%971-%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%2F</url>
+    <content type="text"><![CDATA[前言 最近我终于实现了自己很久之前关于搭建自己专属的博客网站的目标，现在把搭建期间的过程和走过的坑记录下来，如果你对搭建自己的网站有兴趣，不妨可以参考一下我的文章。首先我说下自己的版本，本地环境部署需要做以下几件事12hexo 3.8.0Next 6.7.0 安装Node.js Node.js安装包下载地址，选择安装位置，然后安装时一直点next即可。 安装Git Git安装包下载地址,选择安装位置，然后安装时一直点next即可。 设置全局淘宝源，键入命令config set registrylink1234567 这样就可以加速下载然后键入命令```npm install -g hexo-cli```,等待安装完成，至此Hexo的环境就搭建好了。 4. 在电脑的适当位置，我选择安装到F盘，然后右键选择Git bash，如下图所示![upload successful](\\images\pasted-0.png\)键入命令```hexo init Blog 新建完成后，在路径下会产生下列这些文件夹和文件1234567├── _config.yml├── package.json├── scaffolds├── source| ├── _drafts| └── _posts└── themes 在这里统一说一下站点配置文件即12主题配置文件即```Blog\themes\主题文件夹\_config.yml（我这里是Next主题即为Blog\themes\next\_config.yml) 点击Blog，然后右键选择Git bash here，如下图所示键入启动命令hexo s，然后浏览器访问http://localhost:4000/，会出现下图至此本地环境部署结束。]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[POJ2586]]></title>
