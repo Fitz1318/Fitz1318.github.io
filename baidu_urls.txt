@@ -1,3 +1,4 @@
+https://fitz1318.top/2019/01/19/exo文章中插入图片的方法/
 https://fitz1318.top/2019/01/18/Hexo-Coding搭建自己的博客网站系列3-详述站点全局配置文件/
 https://fitz1318.top/2019/01/18/Hexo-Coding搭建自己的博客网站系列2-部署博客到Coding/
 https://fitz1318.top/2019/01/17/Hexo-Coding搭建自己的博客网站系列1-本地环境部署/

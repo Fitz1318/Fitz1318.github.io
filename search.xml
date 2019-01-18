@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hexo文章中插入图片的方法]]></title>
+    <url>%2F2019%2F01%2F19%2Fexo%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E7%9A%84%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[前言我之前都是先在CSDN上写好要发布的文章，然后再导出为Markdown文件。然后我就直接将文件复制到_post文件夹下，就行depoly,发布到我的博客网站上，我自己在电脑上浏览是正常的，图片也都能正确的显示出来，但是今天有个评论说不显示图片。我换了手机浏览博客，果然不显示。 解决方法 设置站点配置_config.yml:将post_asset_folder: false改为post_asset_folder: true 安装插件:npm install https://github.com/CodeFalling/hexo-asset-image -- save 运行hexo n &quot;XXXXXX&quot;,生成XXXXX.md博文时就会在/source/_posts目录下生成XXXXXX的文件夹，将你想在XXXXX博文中插入的照片放置到这个同名文件夹中即可，图片的命名随意。 添加图片:在想添加的位置写入![](图片名字.图片格式),例如![](1.png)。]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo+Coding搭建自己的博客网站系列3-详述站点全局配置文件]]></title>
     <url>%2F2019%2F01%2F18%2FHexo-Coding%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%B3%BB%E5%88%973-%E8%AF%A6%E8%BF%B0%E7%AB%99%E7%82%B9%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%2F</url>
     <content type="text"><![CDATA[Hexo 目录如下图这是Blog文件的目录。从上到下依次解释 node_modules:hexo整个项目的环境依赖，hexo初始化时自动生成的。 public:存放的是整个项目的页面，样式，及逻辑代码。 scaffolds:scaffolds是脚手架的意思，当你新建一篇文章(hexo new page ‘title’)的时候，hexo是根据这个目录下的文件进行构建的。 source:这个目录很重要，新建的文章都是在保存在这个目录下的_posts 。_posts 目录下是一个个 markdown 文件。 themes:是网站的主题目录，Hexo有很好的主题扩展能力，开源主题也很丰富，该目录下每一个子目录就是一个主题。 _config.yml:站点全局配置文件。 站点全局配置文件 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273# Hexo Configuration## Docs: https://hexo.io/docs/configuration.html## Source: https://github.com/hexojs/hexo/# Sitetitle: 七七的旧夏天 #网站主标题subtitle: #网站副标题description: 热爱生活，珍惜每一天 #网站描述keywords: 客观、理智、冷静 #关键字author: Fitz #作者language: zh_CN #语言timezone: #网站时区。默认使用您电脑的时区# URLurl: https://fitz1318.top #你的站点urlroot: / #站点的根目录permalink: :year/:month/:day/:title/ #文章的永久链接格式permalink_defaults: #永久链接中各部分的默认值# Directorysource_dir: source #资源文件夹，这个文件夹用来存放内容public_dir: public #公共文件夹，这个文件夹用于存放生成的站点文件tag_dir: tags #标签文件夹archive_dir: archives #归档文件夹category_dir: categories #分类文件夹code_dir: downloads/code #Include code 文件夹i18n_dir: :lang #国际化（il8n)文件夹skip_render: README.md #跳过指定文件的渲染# Writingnew_post_name: :title.md #新文章的文件名称default_layout: post #预设布局titlecase: false #把标题转换成titlecaseexternal_link: true #在新标签中打开链接filename_case: 0 #把文件名称转换成（1）小写（2）大写render_drafts: false #是否显示草稿post_asset_folder: false #是否启动Asset文件夹relative_link: false #把链接改为与根目录的相对位址future: true #显示未来的文章highlight: #内容中代码块的设置 enable: true line_number: true auto_detect: true tab_replace: # Home page settingindex_generator: path: '' per_page: 10 #每页显示的文章数量 order_by: -date #文章排序规则 # Category &amp; Tagdefault_category: uncategorized #默认分类category_map: #分类别名tag_map: #标签别名# Date / Time formatdate_format: YYYY-MM-DD #日期格式time_format: HH:mm:ss #时间格式# Paginationper_page: 10 #分页数量pagination_dir: page# Extensionstheme: next #主题名称# Deploymentdeploy: #部署部分的设置 type: git #部署类型 repo: git@git.coding.net:fitz1318/Fitz1318.git #部署仓库地址 #git@github.com:Fitz1318/Fitz1318.github.io.git baranch: master]]></content>
