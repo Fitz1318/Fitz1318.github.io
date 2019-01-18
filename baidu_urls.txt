@@ -1,2 +1,3 @@
+https://fitz1318.top/2019/01/18/Hexo-Coding搭建自己的博客网站系列2-部署博客到Coding上/
 https://fitz1318.top/2019/01/17/Hexo-Coding搭建自己的博客网站系列1-本地环境部署/
 https://fitz1318.top/2019/01/14/POJ2586/
